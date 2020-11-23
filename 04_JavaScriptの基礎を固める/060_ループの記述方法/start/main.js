@@ -1,8 +1,25 @@
-const arry = [1,2,3,4,5,6];
+const todos = [
+    {
+        id: 1,
+        title: 'Go to school',
+        completed: true
+    },
+    {
+        id: 2,
+        title: 'Go to museum',
+        completed: true
+    },
+    {
+        id: 3,
+        title: 'Go to shopping',
+        completed: false
+    }
+]
 
-
-for(let v of arry) {
-    console.log(v);
+for(let todo of todos) {
+    
+    if(todo.completed == true) {
+        console.log(todo.title);
+    }
+    
 }
-
-
