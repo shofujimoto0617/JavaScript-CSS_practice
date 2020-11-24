@@ -1,25 +1,10 @@
-const todos = [
-    {
-        id: 1,
-        title: 'Go to school',
-        completed: true
-    },
-    {
-        id: 2,
-        title: 'Go to museum',
-        completed: true
-    },
-    {
-        id: 3,
-        title: 'Go to shopping',
-        completed: false
-    }
-]
+const num = 0;
+const bool = Boolean(num);
+console.log(bool);
 
-for(let todo of todos) {
-    
-    if(todo.completed == true) {
-        console.log(todo.title);
-    }
-    
+
+if(!num) {
+    console.log('this is true');
+}else {
+    console.log('this is false');
 }
