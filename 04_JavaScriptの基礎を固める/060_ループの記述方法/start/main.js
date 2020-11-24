@@ -1,6 +1,10 @@
-const arry = [1,2,3,4,5,6];
+const num = 0;
+const bool = Boolean(num);
+console.log(bool);
 
 
-for(let i = 0; i < arry.length; i++) {
-    console.log(i);
+if(!num) {
+    console.log('this is true');
+}else {
+    console.log('this is false');
 }
