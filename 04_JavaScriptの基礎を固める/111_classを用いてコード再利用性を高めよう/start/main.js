@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ta.animate();
         ta2.animate();
     }, 1000);
+
 });
 
 class TextAnimation {
