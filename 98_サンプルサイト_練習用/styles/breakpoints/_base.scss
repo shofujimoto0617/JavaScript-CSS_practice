@@ -153,11 +153,7 @@ main {
             transform-origin: right;
         }
 
-        &.inview {
-            &::before {
-                transform: translateY(-50%);
-            }
-        }
+        
     }
 
     &__sub {
@@ -184,6 +180,12 @@ main {
 
     &__texts {
         @extend .pb-sm;
+
+        &.inview {
+            & .travel__title::before {
+                transform: translateY(-50%);
+            }
+        }
     }
 }
 
@@ -310,33 +312,41 @@ main {
     position: fixed;
     top: 70%;
     transform: translateY(-50%);
-    color: $cBlack;
-
-    & a,
-    & span {
-        color: $cBlack;
-        text-decoration: none !important;
-        margin: 0 40px;
-        vertical-align: middle;
+    transition: all .3s ease-in;
+  
+    & .tween-animate-title {
+      color: $cBlack;
+      text-decoration: none !important;
+      margin: 0 40px;
+      vertical-align: middle;
+      letter-spacing: 2px;
     }
-
+  
     &.left {
+      left: -50px;
+  
+      &.inview {
         left: 50px;
-
-        & .side__inner {
-            transform-origin: top left;
-            transform: rotate(-90deg);
-        }
+      }
+  
+      & .side__inner {
+        transform-origin: top left;
+        transform: rotate(-90deg);
+      }
     }
     &.right {
+      right: -50px;
+  
+      &.inview {
         right: 50px;
-
-        & .side__inner {
-            transform-origin: top right;
-            transform: rotate(90deg);
-        }
+      }
+  
+      & .side__inner {
+        transform-origin: top right;
+        transform: rotate(90deg);
+      }
     }
-}
+  }
 
 .icon {
     position: relative;
